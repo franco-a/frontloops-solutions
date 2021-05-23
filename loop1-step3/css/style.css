@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #16a085;
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.order-card {
+  background-image: url(../img/bicycle.png);
+  background-repeat: no-repeat;
+  background-position: 0 calc(100% + 180px);
+  background-size: 100% 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  padding: 48px;
+  height: 500px;
+}
+@media (max-width: 500px) {
+  .order-card {
+    background-image: none;
+  }
+}
+.order-card__top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.order-card__header, .order-card__price {
+  color: #080808;
+}
+.order-card__header {
+  font-size: 2.2rem;
+  font-weight: 700;
+  padding-right: 10px;
+}
+.order-card__account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  border-radius: 50%;
+  border: 1px solid #B0B0B0;
+  margin-left: auto;
+  transition: box-shadow 0.2s ease-in;
+}
+.order-card__account:hover {
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+}
+.order-card__thanks {
+  color: #B0B0B0;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 34px;
+}
+.order-card__order {
+  margin-bottom: 24px;
+  display: flex;
+}
+.order-card__item, .order-card__total, .order-card__price {
+  font-size: 1.8rem;
+}
+.order-card__item, .order-card__total {
+  color: #808080;
+  font-weight: 500;
+  padding-right: 15px;
+}
+.order-card__price {
+  font-weight: 700;
+  margin-left: auto;
+}
+.order-card__total {
+  font-weight: 700;
+}/*# sourceMappingURL=style.css.map */

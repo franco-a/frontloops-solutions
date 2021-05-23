@@ -1,0 +1,109 @@
+$green: #16a085;
+$black: #080808;
+$light-gray: #B0B0B0;
+$gray: #808080;
+$fw-bold: 700;
+$fw-reg: 400;
+$fw-med: 500;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    background-color: $green;
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.order-card {
+    background-image: url(../img/bicycle.png);
+    background-repeat: no-repeat;
+    background-position: 0 calc(100% + 180px);
+    background-size: 100% 100%;
+    box-shadow: 0 4px 4px rgba($color: #000, $alpha: 0.25);
+    background-color: #fff;
+    padding: 48px;
+    height: 500px;
+
+    @media (max-width: 500px) {
+        background-image: none;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__header,
+    &__price {
+        color: $black;
+    }
+
+    &__header {
+        font-size: 2.2rem;
+        font-weight: $fw-bold;
+        padding-right: 10px;
+    }
+
+    &__account {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        margin-left: auto;
+        border-radius: 50%;
+        border: 1px solid $light-gray;
+        margin-left: auto;
+        transition: box-shadow 0.2s ease-in;
+
+        &:hover {
+            box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+        }
+    }
+
+    &__thanks {
+        color: $light-gray;
+        font-size: 1.6rem;
+        font-weight: $fw-reg;
+        margin-bottom: 34px;
+    }
+
+    &__order {
+        margin-bottom: 24px;
+        display: flex;
+    }
+
+    &__item,
+    &__price {
+        font-size: 1.8rem;
+    }
+
+    &__item {
+        color: $gray;
+        font-weight: $fw-med;
+        padding-right: 15px;
+    }
+
+    &__price {
+        font-weight: $fw-bold;
+        margin-left: auto;
+    }
+
+    &__total {
+        @extend .order-card__item;
+        font-weight: $fw-bold;
+    }
+}
