@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.pay-card {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.pay-card__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+.pay-card__dots-container {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+.pay-card__dots {
+  background-color: #efefef;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.pay-card__dots--active {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #999;
+}
+.pay-card__header {
+  color: #262626;
+  font-size: 2.4rem;
+}
+.pay-card__option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #999;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-top: 1px solid #f0f0f0;
+  padding: 10px 20px;
+}
+.pay-card__option:hover {
+  background-color: #efefef;
+  color: #262626;
+}
+.pay-card__option-svg {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+.pay-card__option-check {
+  margin-left: auto;
+}
+.pay-card__proceed {
+  background-color: #4e80d7;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 15px 0;
+}
+.pay-card__proceed:hover {
+  background-color: #4a82f1;
+}
+.pay-card__proceed:active {
+  background-color: #4a82f1;
+  transform: translateY(4px);
+}
+.pay-card__proceed-arrow {
+  margin-left: 5px;
+  width: 15px;
+  height: 15px;
+}/*# sourceMappingURL=style.css.map */
