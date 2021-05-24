@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Loop 1 - Step 4</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="chat">
+
+    <div class="chat__top">
+      <div class="circle"></div>
+      <p class="chat__user">MARK ZUCKERBERG</p>
+      <button class="chat__close">
+        <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="chat__close-svg">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="chat__middle">
+      <div class="chat__divider">
+        <hr class="horizontal-line">
+        <p class="chat__date">TODAY</p>
+        <hr class="horizontal-line">
+      </div>
+
+      <div class="chat__message">
+        <p class="chat__time">10:53</p>
+        <p class="chat__text chat__text--self">Hi, Mark! I made a new design for the Messenger App.</p>
+      </div>
+
+      <div class="chat__message">
+        <p class="chat__time chat__time--right">10:57</p>
+        <p class="chat__text chat__text--recipient chat__text--right">
+          Yo! Send it to my assitant and we'll review it during the year
+        </p>
+      </div>
+
+      <div class="chat__message">
+        <p class="chat__time">11:03</p>
+        <p class="chat__text chat__text--self">But Mark...</p>
+      </div>
+
+      <div class="chat__message">
+        <p class="chat__text chat__text--blocked chat__text--right">
+          You were blocked by the user
+        </p>
+      </div>
+    </div>
+    
+
+    <div class="chat__bottom">
+      <hr class="horizontal-line">
+      <div class="chat__bottom-interactive">
+        <input type="text" placeholder="Enter your message" class="chat__input">
+        <button class="chat__send">SEND</button>
+      </div>
+    </div>
+
+  </div>
+  
+</body>
+</html>
