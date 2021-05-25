@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-width: 100%;
+  min-height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket {
+  background-color: #fff;
+  border-radius: 8px;
+  width: max(420px, 35vw);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 3em;
+}
+.ticket__destination {
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #b9b5b1;
+  margin-bottom: 4em;
+  position: relative;
+}
+.ticket__destination::before {
+  position: absolute;
+  content: "";
+  background-color: #d3e6f4;
+  width: 40px;
+  height: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ticket__from::before {
+  display: block;
+  content: "FRA";
+  color: #3b8acf;
+  font-size: 50px;
+  font-family: "Prompt", sans-serif;
+}
+.ticket__to {
+  margin-left: auto;
+}
+.ticket__to::before {
+  display: block;
+  content: "AMS";
+  color: #3b8acf;
+  font-size: 50px;
+  font-family: "Prompt", sans-serif;
+}
+.ticket__top-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.ticket__info {
+  color: #b9b5b1;
+  font-weight: 500;
+  font-size: 0.75rem;
+  margin-bottom: 2px;
+}
+.ticket__info:nth-child(odd) {
+  grid-row: 1;
+}
+.ticket__stat {
+  color: #000;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+.ticket__bttm-info {
+  display: grid;
+  grid-template: repeat(3, auto)/repeat(2, auto);
+}
+.ticket__info-group {
+  grid-column: 1;
+  align-self: center;
+}
+.ticket__code {
+  grid-column: 2;
+  grid-row: 1/-1;
+  margin-left: auto;
+}/*# sourceMappingURL=style.css.map */

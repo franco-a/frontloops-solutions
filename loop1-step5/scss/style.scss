@@ -1,0 +1,126 @@
+$blue: #3b8acf;
+$light-blue: #d3e6f4;
+$gray: #b9b5b1;
+$black: #000;
+$white: #fff;
+$ff-primary: 'Roboto', sans-serif;
+$ff-alt: 'Prompt', sans-serif;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-width: 100%;
+  min-height: 100%;
+  font-family: $ff-primary;
+}
+
+.container {
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket {
+  background-color: $white;
+  border-radius: 8px;
+  width: max(420px, 35vw);
+  height: fit-content;
+  padding: 3em;
+
+  &__destination {
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    font-weight: 500;
+    color: $gray;
+    margin-bottom: 4em;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-color: $light-blue;
+      width: 40px;
+      height: 8px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__from {
+
+    &::before {
+      display: block;
+      content: 'FRA';
+      color: $blue;
+      font-size: 50px;
+      font-family: $ff-alt;
+    }
+  }
+
+  &__to {
+    margin-left: auto;
+
+    &::before {
+      display: block;
+      content: 'AMS';
+      color: $blue;
+      font-size: 50px;
+      font-family: $ff-alt;
+    }
+  }
+
+  &__top-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__info {
+    color: $gray;
+    font-weight: 500;
+    font-size: 0.75rem;
+    margin-bottom: 2px;
+
+    &:nth-child(odd) {
+      grid-row: 1;
+    }
+  }
+
+  &__stat {
+    color: $black;
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+
+  &__bttm-info {
+    display: grid;
+    grid-template: repeat(3, auto) / repeat(2, auto);
+  }
+
+  &__info-group {
+    grid-column: 1;
+    align-self: center;
+  }
+
+  &__code {
+    grid-column: 2;
+    grid-row: 1 / -1;
+    margin-left: auto;
+  }
+}
