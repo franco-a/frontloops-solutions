@@ -1,0 +1,139 @@
+$colors: (
+  'background':  #4d515d,
+  'primary': #181a1e
+);
+
+$font-weights: (
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'bold': 700
+);
+
+@function prem($pixel, $base: 16) {
+  @return #{$pixel / $base}rem;
+}
+
+@function pem($pixel, $base: 16) {
+  @return #{$pixel / $base}em;
+}
+
+:root {
+  @each $name, $value in $colors {
+    --color-#{$name}: #{$value};
+  }
+
+  @each $name, $value in $font-weights {
+    --fw-#{$name}: #{$value};
+  }
+
+  --ff-primary: 'Roboto', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+.main-container {
+  background: var(--color-background);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.register-card {
+  background-color: #fff;
+  width: 80vw;
+  height: 90vh;
+  border-radius: 5px;
+  color: var(--color-primary);
+  font-family: var(--ff-primary);
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+
+  &__right {
+    width: 40%;
+  }
+  
+  &__heading {
+    font-size: prem(40);
+    font-weight: var(--fw-light);
+  }
+
+  &__paragraph {
+    font-size: prem(15);
+    font-weight: var(--fw-regular);
+    opacity: 0.7;
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__icon {
+      width: 22px;
+      height: 22px;
+    }
+
+    &__text {
+      text-transform: uppercase;
+      font-weight: var(--fw-bold);
+      opacity: 0.7;
+      font-size: prem(12);
+    }
+  }
+
+  &__emails {
+    display: flex;
+  }
+
+  &__reminder {
+    font-weight: var(--fw-medium);
+  }
+
+  &__email {
+    margin-left: auto;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    opacity: 0.7;
+    font-size: prem(12);
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+}
